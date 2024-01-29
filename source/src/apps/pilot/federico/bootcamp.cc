@@ -19,8 +19,8 @@ int main(int argc, char ** argv ) {
     if ( filenames.size() > 0 ) {
     std::cout << "You entered: " << filenames[ 1 ] << " as the PDB file to be read" << std::endl;
     } else {
-        std::cout << "You didn’t provide a PDB file with the -in::file::s option" << std::endl;
+        std::cout << "You didn't provide a PDB file with the -in::file::s option" << std::endl;
         return 1;
-    }
+    }   
 	return 0;
 } 
