@@ -1,0 +1,1410 @@
+# Keep citations in order of date in this file.
+# Whitespace does not matter, but indentation makes it easier to read.
+# Author entries must be "Given Names" "Surname" "Initials", in quotation marks.  Exclude
+# periods and spaces from initials.
+# Fields are:
+# [BEGIN_CITATION]
+#   [BEGIN/END_PRIMARY_AUTHORS] The first author or co-first authors on the paper.
+#   [BEGIN/END_COAUTHORS] Middle authors.
+#   [BEGIN/END_SENIOR_AUTHORS] The seniormost author on the paper.
+#   [BEGIN/END_YEAR] Publication year.  Do not include month or day.
+#   [BEGIN/END_TITLE] Paper title.  Do not include a period at the end.
+#   [BEGIN/END_JOURNAL] Journal title, abbreviated, without periods.  Note: for manuscripts under review, use XXX in this field.
+#   [BEGIN/END_VOLUME_ISSUE_PAGES] In the format ##(##):###-###.  Note: for manuscripts under review, use XXX in this field.
+#   [BEGIN/END_DOI] Digital object identifier.  Note: for manuscripts under review, use a unique dummy identifier.
+# [END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Kim T" "Simons" "KT"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Richard" "Bonneau" "R"
+        "Ingo" "Ruczinski" "I"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        1999
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Ab initio protein structure prediction of CASP III targets using ROSETTA
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proteins
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        Suppl 3:171-6
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/(sici)1097-0134(1999)37:3+<171::aid-prot21>3.3.co;2-q
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Richard" "Bonneau" "R"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Jerry" "Tsai" "J"
+        "Ingo" "Ruczinski" "I"
+        "Dylan" "Chivian" "D"
+        "Carol" "Rohl" "C"
+        "Charlie" "Strauss" "CE"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2001
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Rosetta in CASP4: progress in ab initio protein structure prediction
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proteins
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        Suppl 5:119-26
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/prot.1170
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Harpreet" "Singh" "H"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "G P S" "Raghava" "GPS"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2001
+    [END_YEAR]
+    [BEGIN_TITLE]
+        ProPred: prediction of HLA-DR binding sites
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Bioinformatics
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        17(12):1236-1237
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1093/bioinformatics/17.12.1236
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Srivatsan" "Raman" "S"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Robert" "Vernon" "R"
+        "James" "Thompson" "J"
+        "Michael" "Tyka" "M"
+        "Ruslan" "Sadreyev" "R"
+        "Jimin" "Pei" "J"
+        "David" "Kim" "D"
+        "Elizabeth" "Kellogg" "E"
+        "Frank" "DiMaio" "F"
+        "Oliver" "Lange" "O"
+        "Lisa" "Kinch" "L"
+        "Will" "Sheffler" "W"
+        "Bong-Hyun" "Kim" "BH"
+        "Rhiju" "Das" "R"
+        "Nick V" "Grishin" "NV"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2009
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Structure prediction for CASP8 with all-atom refinement using Rosetta
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proteins
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        77 Suppl 9:89-99
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/prot.22540
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Barak" "Raveh" "B"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Nir" "London" "N"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Ora" "Schueler-Furman" "O"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2010
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Sub-angstrom modeling of complexes between flexible peptides and globular proteins
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proteins
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        78(9):2029-40
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/prot.22716
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Steven M" "Lewis" "SM"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Brian A" "Kuhlman" "BA"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2011
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Anchored Design of Protein-Protein Interfaces
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS ONE
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        6(6): e20872
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        doi:10.1371/journal.pone.0020872
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Sarel J" "Fleishman" "SJ"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Andrew" "Leaver-Fay" "A"
+        "Jacob E" "Corn" "JE"
+        "Eva-Maria" "Strauch" "E-M"
+        "Sagar D" "Khare" "SD"
+        "Nobuyasu" "Koga" "N"
+        "Justin" "Ashworth" "J"
+        "Paul" "Murphy" "P"
+        "Florian" "Richter" "F"
+        "Gordon" "Lemmon" "G"
+        "Jens" "Meiler" "J"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2011
+    [END_YEAR]
+    [BEGIN_TITLE]
+        RosettaScripts: A Scripting Language Interface to the Rosetta Macromolecular Modeling Suite
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS ONE
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        6(6):e20161
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pone.0020161
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Firas" "Khatib" "F"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Seth" "Cooper" "S"
+        "Michael D" "Tyka" "MD"
+        "Kefan" "Xu" "K"
+        "Ilya" "Makedon" "I"
+        "Zoran" "Popovic" "Z"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+        "Foldit" "Players" "F"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2011
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Algorithm discovery by protein folding game players
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proc Natl Acad Sci USA
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        108(47):18949-53
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1073/pnas.1115898108
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Po-Ssu" "Huang" "PS"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Yin-En Andrew" "Ban" "YE"
+        "Florian" "Richter" "F"
+        "Ingemar" "Andre" "I"
+        "Robert" "Vernon" "R"
+        "William R" "Schief" "WR"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2011
+    [END_YEAR]
+    [BEGIN_TITLE]
+        RosettaRemodel: a generalized framework for flexible backbone protein design
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS One
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        6(8):e24109
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pone.0024109
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Frank" "DiMaio" "F"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Andrew" "Leaver-Fay" "A"
+        "Phil" "Bradley" "P"
+        "David" "Baker" "D"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Ingemar" "André" "I"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2011
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Modeling symmetric macromolecular structures in Rosetta3
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS One
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        6(6):e20450
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pone.0020450
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Barak" "Raveh" "B"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Nir" "London" "N"
+        "Lior" "Zimmerman" "L"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Ora" "Schueler-Furman" "O"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2011
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Rosetta FlexPepDock ab-initio: simultaneous folding, docking and refinement of peptides onto their receptors
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS One
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        6(4):e18934
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pone.0018934
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Michael D" "Tyka" "MD"
+        "Daniel A" "Keedy" "DA"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Ingemar" "André" "I"
+        "Frank" "Dimaio" "F"
+        "Yifan" "Song" "Y"
+        "David C" "Richardson" "DC"
+        "Jane S" "Richardson" "JS"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2011
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Alternate states of proteins revealed by detailed energy landscape mapping
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        J Mol Biol
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        405(2):607-18
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1016/j.jmb.2010.11.008
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Gordon" "Lemmon" "G"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Jens" "Meiler" "J"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2012
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Rosetta Ligand docking with flexible XML protocols
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Methods Mol Biol
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        819:143-55
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1007/978-1-61779-465-0_10
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Andrew" "Leaver-Fay" "A"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Matthew J" "O'Meara" "MJ"
+        "Mike" "Tyka" "M"
+        "Ron" "Jicak" "R"
+        "Yifan" "Song" "Y"
+        "Elizabeth H" "Kellogg" "EH"
+        "James" "Thompson" "J"
+        "Ian W" "Davis" "IW"
+        "Roland A" "Pache" "RA"
+        "Sergey" "Lyskov" "S"
+        "Jeffery J" "Gray" "JJ"
+        "Tanja" "Kortemme" "T"
+        "Jane S" "Richardson" "JS"
+        "James J" "Havranek" "JJ"
+        "Jack" "Snoeyink" "J"
+        "David" "Baker" "D"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Brian" "Kuhlman" "B"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2013
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Scientific benchmarks for guiding macromolecular energy function improvement
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Methods Enzymol
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        523:109-43
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1016/B978-0-12-394292-0.00006-0
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Yifan" "Song" "Y"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Frank" "DiMaio" "F"
+        "Ray Yu-Ruei" "Wang" "RY"
+        "David" "Kim" "D"
+        "Chris" "Miles" "C"
+        "TJ" "Brunette" "T"
+        "James" "Thompson" "J"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2013
+    [END_YEAR]
+    [BEGIN_TITLE]
+        High-resolution comparative modeling with RosettaCM
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Structure
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        21(10):1735-42
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1016/j.str.2013.08.005
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Karen R" "Khar" "KR"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Luki" "Goldschmidt" "L"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "John" "Karanicolas" "J"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2013
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Fast docking on graphics processing units via Ray-Casting
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS One
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        8(8):e70661
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pone.0070661
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Indigo" "King" "I"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Esteban N" "Garza" "EN"
+        "Ronit" "Mazor" "R"
+        "Jonathan L" "Linehan" "JL"
+        "Ira" "Pastan" I"
+        "Marion" "Pepper" "M"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2014
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Removing T-cell epitopes with computational protein design
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proc Natl Acad Sci USA
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        111(23):8577-8582
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1073/pnas.1321126111
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Samuel" "DeLuca" "S"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Karen" "Khar" "K"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Jens" "Meiler" "J"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2015
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Fully Flexible Docking of Medium Sized Ligand Libraries with RosettaLigand
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS One
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        10(7):e0132508
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pone.0132508
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Ragul" "Gowthaman" "R"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Sergey" "Lyskov" "S"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "John" "Karanicolas" "J"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2015
+    [END_YEAR]
+    [BEGIN_TITLE]
+        DARC 2.0: Improved Docking and Virtual Screening at Protein Interaction Sites
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS One
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        10(7):e0131612
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pone.0131612
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Gaurav" "Bhardwaj" "G"
+        "Vikram Khipple" "Mulligan" "VK"
+        "Christopher D." "Bahl" "G"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Jason M." "Gilmore" "JM"
+        "Peta J." "Harvey" "PJ"
+        "Olivier" "Cheneval" "O"
+        "Gary W." "Buchko" "GW"
+        "Surya" "Pulavarti" "SVSRK"
+        "Quentin" "Kaas" "Q"
+        "ALexander" "Eletsky" "A"
+        "Po-Ssu" "Huang" "P-S"
+        "William A" "Johnsen" "PS"
+        "Per Jr." "Greisen" "P Jr."
+        "Gabriel J." "Rocklin" "GJ"
+        "Yifan" "Song" "Y"
+        "Thomas W." "Linsky" "TW"
+        "Andrew" "Watkins" "A"
+        "Stephen A." "Rettie" "SA"
+        "Xianzhong" "Xu" "X"
+        "Lauren P." "Carter" "LP"
+        "Richard" "Bonneau" "R"
+        "James M." "Olson" "JM"
+        "Evangelos" "Coutsias" "E"
+        "Colin E." "Correnti" "CE"
+        "Thomas" "Szyperski" "T"
+        "David J." "Craik" "DJ"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2016
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Accurate de novo design of hyperstable constrained peptides
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Nature
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        538(7625):329-35
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1038/nature19791
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Ragul" "Gowthaman" "R"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Sven A" "Miller" "SA"
+        "Steven" "Rogers" "S"
+        "Jittasak" "Khowsathit" "J"
+        "Lan" "Lan" "L"
+        "Nan" "Bai" "N"
+        "David K" "Johnson" "DK"
+        "Chunjing" "Liu" "C"
+        "Liang" "Xu" "L"
+        "Asokan" "Anbanandam" "A"
+        "Jeffrey" "Aubé" "J"
+        "Anuradha" "Roy" "A"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "John" "Karanicolas" "J"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2016
+    [END_YEAR]
+    [BEGIN_TITLE]
+        DARC: Mapping Surface Topography by Ray-Casting for Effective Virtual Screening at Protein Interaction Sites
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        J Med Chem
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        59(9):4152-70
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1021/acs.jmedchem.5b00150
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Scott E" "Boyken" "SE"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Zibo" "Chen" "Z"
+        "Benjamin" "Groves" "B"
+        "Robert A" "Langan" "RA"
+        "Gustav" "Oberdorfer" "G"
+        "Alex" "Ford" "A"
+        "Jason M" "Gilmore" "JM"
+        "Chunfu" "Xu" "C"
+        "Frank" "DiMaio" "F"
+        "Jose Henrique" "Pereira" "JH"
+        "Banumathi" "Sankaran" "B"
+        "Georg" "Seelig" "G"
+        "Peter H" "Zwart" "PH"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2016
+    [END_YEAR]
+    [BEGIN_TITLE]
+        De novo design of protein homo-oligomers with modular hydrogen-bond network-mediated specificity
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Science
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        352(6286):680-7
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1126/science.aad8865
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Bobo" "Dang" "B"
+        "Haifan" "Wu" "H"
+        "Vikram Khipple" "Mulligan" "VK"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Marco" "Mravic" "M"
+        "Yibing" "Wu" "Y"
+        "Thomas" "Lemmin" "T"
+        "Alexander" "Ford" "A"
+        "Daniel-Adriano" "Silva" "D-A"
+        "David" "Baker" "D"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "William" "DeGrado" "WF"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2017
+    [END_YEAR]
+    [BEGIN_TITLE]
+        De novo design of covalently constrained mesosize protein scaffolds with unique tertiary structures
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proc Natl Acad Sci USA
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        114(41):10852–10857
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1073/pnas.1710695114
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Jason W" "Labonte" "JW"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Jared" "Adolf-Bryfogle" "J"
+        "William R" "Schief" "WR"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Jeffery J" "Gray" "JJ"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2017
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Residue-centric modeling and design of saccharide and glycoconjugate structures
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        J Comput Chem
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        38(5):276–87
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/jcc.24679
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Brandon" "Frenz" "B"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Alexandra C" "Walls" "AC"
+        "Edward H" "Egelman" "EH"
+        "David" "Veesler" "D"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Frank" "DiMaio" "F"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2017
+    [END_YEAR]
+    [BEGIN_TITLE]
+        RosettaES: a sampling strategy enabling automated interpretation of difficult cryo-EM maps
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Nat Meth
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        14(8):797-800
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1038/nmeth.4340
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Parisa" "Hosseinzadeh" "P"
+        "Gaurav" "Bhardwaj" "G"
+        "Vikram Khipple" "Mulligan" "VK"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Matthew D" "Shortridge" "MD"
+        "Timothy W" "Craven" "TW"
+        "Fátima" "Pardo-Avila" "F"
+        "Stephen A" "Rettie" "SA"
+        "David E" "Kim" "DA"
+        "Daniel-Adriano" "Silva" "D-A"
+        "Yehia M" "Ibrahim" "YM"
+        "Ian K" "Webb" "IK"
+        "John R" "Cort" "JR"
+        "Joshua N" "Adkins" "JN"
+        "Gabriele" "Varani" "G"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2017
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Comprehensive computational design of ordered peptide macrocycles
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Science
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        358(6369):1461-6
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1126/science.aap7577
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Brian D" "Weitzner" "BD"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Jeliazko R" "Jeliazkov" "JR"
+        "Nicholas" "Marze" "N"
+        "Daisuke" "Kuroda" "D"
+        "Rahel" "Frick" "R"
+        "Jared" "Adolf-Bryfogle" "J"
+        "Naireeta" "Biswa" "N"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Roland L" "Dunbrack Jr" "RL Jr"
+        "Jeffrey J" "Gray" "J"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2017
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Modeling and docking of antibody structures with Rosetta
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Nat Protoc
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        12(2):401-16
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+          doi:10.1038/nprot.2016.180
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Jared" "Adolf-Bryfogle" "J"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Oleks" "Kalyuzhniy" "O"
+        "Michael" "Kubitz" "M"
+        "Brian D" "Weitzner" "BD"
+        "Xiaozhen" "Hu" "X"
+        "Yumiko" "Adachi" "Y"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "William R" "Schief" "WR"
+        "Roland L" "Dunbrack Jr" "RL Jr"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2018
+    [END_YEAR]
+    [BEGIN_TITLE]
+        RosettaAntibodyDesign (RAbD): A general framework for computational antibody design
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS Comput Biol
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        14(4):e1006112
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+         10.1371/journal.pcbi.1006112
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Darwin Yu" "Fu" "DY"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Jens" "Meiler" "J"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2018
+    [END_YEAR]
+    [BEGIN_TITLE]
+        RosettaLigandEnsemble: A Small-Molecule Ensemble-Driven Docking Approach
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        ACS Omega
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        3(4):3655-64
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1021/acsomega.7b02059
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Brandon" "Frenz" "B"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Sebastian" "Rämisch" "S"
+        "Andrew J" "Borst" "AJ"
+        "Alexandra C" "Walls" "AC"
+        "Jared" "Adolf-Bryfogle" "J"
+        "William R" "Schief" "WR"
+        "David" "Veesler" "D"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Frank" "DiMaio" "F"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2018
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Automatically fixing errors in glycoprotein structures with Rosetta
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Structure
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        27(1):134-139.e3
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1016/j.str.2018.09.006
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Kristen M" "Blacklock" "KM"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Lu" "Yang" "L"
+        "Vikram Khipple" "Mulligan" "VK"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Sagar D" "Khare" "SD"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2018
+    [END_YEAR]
+    [BEGIN_TITLE]
+        A computational method for the design of nested proteins by loop-directed domain insertion
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proteins
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        86(3):354-369
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/prot.25445
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Andrew M" "Watkins" "AM"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Caleb" "Geniesse" "C"
+        "Wipapat" "Kladwang" "W"
+        "Paul" "Zakrevsky" "P"
+        "Luc" "Jaeger" "L"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Rhiju" "Das" "R"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2018
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Blind prediction of noncanonical RNA structure at atomic accuracy
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Sci Adv
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        4(5):eaar5316
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1126/sciadv.aar5316
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Jack B" "Maguire" "JB"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Scott E" "Boyken" "SE"
+        "David" "Baker" "D"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Brian" "Kuhlman" "B"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2018
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Rapid Sampling of Hydrogen Bond Networks for Computational Protein Design
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        J Chem Theory Comput
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        14(5):2751-2760
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1021/acs.jctc.8b00033
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Randi" "Vita" "R"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Swapnil" "Mahajan" "S"
+        "James A" "Overton" JA"
+        "Sandeep Kumar" "Dhanda" "SK"
+        "Sheridan" "Martini" "S"
+        "Jason R" "Cantrell" "JR"
+        "Daniel K" "Wheeler" "DK"
+        "Alessandro" "Sette" "A"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Bjoern" "Peters" "B"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2018
+    [END_YEAR]
+    [BEGIN_TITLE]
+        The Immune Epitope Database (IEDB): 2018 update
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Nucleic Acids Res
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        47(D1):D339-D343
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1093/nar/gky1006
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Andrew M" "Watkins" "AM"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Ramya" "Rangan" "R"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Rhiju" "Das" "R"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2019
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Using Rosetta for RNA homology modeling
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Methods Enzymol
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        623:177-207
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1016/bs.mie.2019.05.026
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Vikram Khipple" "Mulligan" "VK"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Christine S" "Kang" "CS"
+        "Michael R" "Sawaya" "MR"
+        "Stephen" "Rettie" "S"
+        "Xinting" "Li" "X"
+        "Inna" "Antselovich" "I"
+        "Timothy" "Craven" "T"
+        "Andrew" "Watkins" "A"
+        "Jason W" "Labonte" "JW"
+        "Frank" "DiMaio" "F"
+        "Todd O" "Yeates" "TO"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2020
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Computational design of mixed chirality peptide macrocycles with internal symmetry
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Protein Sci
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        29(12):2433-45
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/pro.3974
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Jianyi" "Yang" "J"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Ivan" "Anishchenko" "I"
+        "Hahnbeom" "Park" "H"
+        "Zhenling" "Peng" "Z"
+        "Sergey" "Ovchinnikov" "S"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2020
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Improved protein structure prediction using predicted interresidue orientations
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proc Natl Acad Sci USA
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        117(3):1496-503
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1073/pnas.1914677117
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Jack B" "Maguire" "JB"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Hugh K" "Haddox" "HK"
+        "Devin" "Strickland" "D"
+        "Samer F" "Halabiya" "SF"
+        "Brian" "Coventry" "B"
+        "Jermel R" "Griffin" "JR"
+        "Surya VSRK" "Pulavarti" "SVSRK"
+        "Matthew" "Cummins" "M"
+        "David F" "Thieker" "DF"
+        "Eric" "Klavins" "E"
+        "Thomas" "Szyperski" "T"
+        "Frank" "DiMaio" "F"
+        "David" "Baker" "D"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Brian" "Kuhlman" "B"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2021
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Perturbing the energy landscape for improved packing during computational protein design
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proteins
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        89(4):436-449
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1002/prot.26030
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Vikram Khipple" "Mulligan" "VK"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Sean" "Workman" "S"
+        "Tianjun" "Sun" "T"
+        "Stephen" "Rettie" "S"
+        "Xinting" "Li" "X"
+        "Liam J" "Worrall" "LJ"
+        "Timothy W" "Craven" "TW"
+        "Dustin T" "King" "DT"
+        "Parisa" "Hosseinzadeh" "P"
+        "Andrew M" "Watkins" "AM"
+        "P Douglas" "Renfrew" "PD"
+        "Sharon" "Guffy" "S"
+        "Jason W" "Labonte" "JW"
+        "Rocco" "Moretti" "R"
+        "Richard" "Bonneau" "R"
+        "Natalie CJ" "Strynadka" "NCJ"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2021
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Computationally designed peptide macrocycle inhibitors of New Delhi metallo-β-lactamase 1
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Proc Natl Acad Sci USA
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        118(12)
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1073/pnas.2012800118
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Brahm J" "Yachnin" "BJ"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Vikram Khipple" "Mulligan" "VK"
+        "Sagar D" "Khare" "SD"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "Chris" "Bailey-Kellogg" "C"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2021
+    [END_YEAR]
+    [BEGIN_TITLE]
+        MHCEpitopeEnergy, a flexible Rosetta-based biotherapeutic deimmunization platform
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        J Chem Inf Model
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        61(5):2368-2382
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1021/acs.jcim.1c00056
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Brian" "Coventry" "B"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2021
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Protein sequence optimization with a pairwise decomposable penalty for buried unsatisfied hydrogen bonds
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        PLoS Comput Biol
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        17(3):e1008061
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1371/journal.pcbi.1008061
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "James R. B." "Eastwood" "JRB"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+	"Linhai" "Jiang" "L"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+	"Kent" "Kirshenbaum" "K"
+    	"P. Douglas" "Renfrew" "PD"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+	2022
+    [END_YEAR]
+    [BEGIN_TITLE]
+	Evaluating the Conformations and Dynamics of Peptoid Macrocycles
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+	The Journal of Physical Chemistry B
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+	126 (28), 5161-5174
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1021/acs.jpcb.2c01669
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Justas" "Dauparas" "J"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Ivan" "Anishchenko" "I"
+        "Nathaniel" "Bennett" "N"
+        "Hua" "Bai" "H"
+        "Robert J." "Ragotte" "RJ"
+        "Lukas F." "Milles" "LF"
+        "Basile I. M." "Wicky" "BIM"
+        "Alexis" "Courbet" "A"
+        "Robbert J." "de Haas" "RJ"
+        "Neville" "Bethel" "N"
+        "Philip J. Y." "Leung" "PJY"
+        "Timothy F." "Huddy" "TF"
+        "Sam" "Pellock" "S"
+        "Doug" "Tischer" "D"
+        "Frederick" "Chan" "F"
+        "Brian" "Koepnick" "B"
+        "Hannah" "Nguyen" "H"
+        "Alex" "Kang" "A"
+        "Banumathi" "Sankaran" "B"
+        "Asim K." "Bera" "AK"
+        "Neil P." "King" "NP"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+        "David" "Baker" "D"
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2022
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Robust deep learning-based protein sequence design using ProteinMPNN
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        Science
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+        378(6615):49-56
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1126/science.add2187
+    [END_DOI]
+[END_CITATION]
+
+[BEGIN_CITATION]
+    [BEGIN_PRIMARY_AUTHORS]
+        "Kevin K." "Yang" "KK"
+    [END_PRIMARY_AUTHORS]
+    [BEGIN_COAUTHORS]
+        "Hugh" "Yeh" "H"
+        "Niccolò" "Zanichelli" "N"
+    [END_COAUTHORS]
+    [BEGIN_SENIOR_AUTHORS]
+    [END_SENIOR_AUTHORS]
+    [BEGIN_YEAR]
+        2023
+    [END_YEAR]
+    [BEGIN_TITLE]
+        Masked Inverse Folding with Sequence Transfer for Protein Representation Learning
+    [END_TITLE]
+    [BEGIN_JOURNAL]
+        bioRxiv
+    [END_JOURNAL]
+    [BEGIN_VOLUME_ISSUE_PAGES]
+    [END_VOLUME_ISSUE_PAGES]
+    [BEGIN_DOI]
+        10.1101/2022.05.25.493516
+    [END_DOI]
+[END_CITATION]
