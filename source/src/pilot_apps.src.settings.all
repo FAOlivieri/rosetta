@@ -331,6 +331,9 @@ sources = {
 	"pilot/fcchou" : [
 		"thermal_sampler_alpha",
 	],
+	"pilot/federico" : [
+		"bootcamp",
+	],
 	"pilot/firas" : [
 		#"check_burial", # /* Firas,Documentation Location,Demo Location */
 	],
