@@ -20,7 +20,7 @@
 #include <test/core/init_util.hh>
 
 // Project Headers
-
+#include <src/protocols/bootcamp/Queue.hh>
 
 // Core Headers
 #include <core/pose/Pose.hh>
@@ -34,19 +34,17 @@ static basic::Tracer TR("QueueTests");
 
 class QueueTests : public CxxTest::TestSuite {
 	//Define Variables
-
+private:
+	protocols::bootcamp::Queue queue_;
 public:
 
 	void setUp() {
 		core_init();
-
+		queue_ = protocols::bootcamp::Queue();
 	}
 
 	void tearDown() {
-
 	}
-
-
 
 	void test_first() {
 
@@ -55,5 +53,34 @@ public:
 
 	}
 
+	void test_enqueue(){
+		core::Size initial_size = queue_.size();
+		queue_.enqueue("test");
+		core::Size final_size = queue_.size();
+		TS_ASSERT( final_size == initial_size+1);
+	}
+	
+	void test_dequeue(){
+		TS_ASSERT_THROWS_ANYTHING(queue_.dequeue());
+		queue_.enqueue("test1");
+		queue_.enqueue("test2");
+		core::Size initial_size=queue_.size();
+		std::string output_string = queue_.dequeue();
+		TS_ASSERT(output_string=="test1");
+		TS_ASSERT(queue_.size()==initial_size-1);
+		output_string = queue_.dequeue();
+		TS_ASSERT(output_string=="test2");
+		TS_ASSERT(queue_.size()==initial_size-2);
+	}
+	void test_is_empty(){
+		TS_ASSERT(queue_.is_empty());
+		queue_.enqueue("test");;
+		TS_ASSERT(!queue_.is_empty());
+	}
+	void test_size(){
+		TS_ASSERT(queue_.size()==0);
+		queue_.enqueue("test");
+		TS_ASSERT(queue_.size()==1);
+	}
 
 };
