@@ -46,6 +46,14 @@ int main(int argc, char ** argv ) {
     protocols::moves::MonteCarloOP monteCarlo(new protocols::moves::MonteCarlo(*mypose, *sfxn, 0.8));
     protocols::moves::PyMOLObserverOP the_observer = protocols::moves::AddPyMOLObserver( *mypose, true, 0 );    
     the_observer->pymol().apply( *mypose);
+    core::kinematics::MoveMap mm;
+    mm.set_bb( true );
+    mm.set_chi( true );
+
+    core::optimization::MinimizerOptions min_opts( "lbfgs_armijo_atol", 0.01, true );
+    core::optimization::AtomTreeMinimizer atm;
+    core::pose::Pose copy_pose = *mypose;
+
 
     for (int i = 0; i < 25; i++) {
         double uniform_random_number= numeric::random::uniform();
@@ -64,14 +72,16 @@ int main(int argc, char ** argv ) {
         repack_task->restrict_to_repacking();
         core::pack::pack_rotamers( *mypose, *sfxn, repack_task );
 
+        atm.run( *copy_pose, mm, *sfxn, min_opts );
+        *mypose = copy_pose;
 
         core::Real newScore = sfxn->score( *mypose );
         TR << "new score: " << newScore << std::endl;
         monteCarlo->boltzmann(*mypose);
         core::Real currScore = sfxn->score( *mypose );
         TR << "current score: " << currScore << std::endl;
-        //core::Real score = sfxn->score( *mypose );
-        //TR << score << std::endl;
+        core::Real score = sfxn->score( *mypose );
+        TR << score << std::endl;
 
     }
 	return 0;
