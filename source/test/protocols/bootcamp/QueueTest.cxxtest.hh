@@ -7,7 +7,7 @@
 // (c) For more information, see http://www.rosettacommons.org. Questions about this can be
 // (c) addressed to University of Washington CoMotion, email: license@uw.edu.
 
-/// @file  t/e/s/t///p/r/o/t/o/c/o/l/s///b/o/o/t/c/a/m/p/QueueTest.cxxtest.hh
+/// @file  protocols/bootcamp/QueueTest.cxxtest.hh
 /// @brief  lab3 test
 /// @author FAOlivieri (federicoaolivieri@gmail.com)
 
