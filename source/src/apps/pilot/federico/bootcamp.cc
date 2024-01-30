@@ -18,7 +18,13 @@
 #include <core/scoring/ScoreFunction.hh>
 #include <core/scoring/ScoreFunctionFactory.hh>
 #include <basic/Tracer.hh>
-
+#include <numeric/random/random.hh>
+#include <protocols/moves/MonteCarlo.hh>
+#include <protocols/moves/MonteCarlo.fwd.hh>
+#include <protocols/moves/PyMOLMover.hh>
+#include <core/pack/task/PackerTask.hh>
+#include <core/pack/pack_rotamers.hh>
+#include <core/pack/task/TaskFactory.hh>
 static basic::Tracer TR( "apps.pilot.federico.bootcamp" );
 
 
@@ -36,10 +42,37 @@ int main(int argc, char ** argv ) {
     }   
 
     core::pose::PoseOP mypose = core::import_pose::pose_from_file( filenames[1] );
-
     core::scoring::ScoreFunctionOP sfxn = core::scoring::get_score_function();
-    core::Real score = sfxn->score( *mypose );
-    TR << score << std::endl;
+    protocols::moves::MonteCarloOP monteCarlo(new protocols::moves::MonteCarlo(*mypose, *sfxn, 0.8));
+    protocols::moves::PyMOLObserverOP the_observer = protocols::moves::AddPyMOLObserver( *mypose, true, 0 );    
+    the_observer->pymol().apply( *mypose);
 
+    for (int i = 0; i < 25; i++) {
+        double uniform_random_number= numeric::random::uniform();
+        core::Size poseSize =  mypose->size();
+
+
+        core::Size randres = uniform_random_number * poseSize + 1 ;
+        core::Real pert1 = numeric::random::gaussian() ;
+        core::Real pert2 = numeric::random::gaussian() ;
+        core::Real orig_phi = mypose->phi( randres );
+        core::Real orig_psi = mypose->psi( randres );
+        mypose->set_phi( randres, orig_phi + pert1 );
+        mypose->set_psi( randres, orig_psi + pert2 );
+
+        core::pack::task::PackerTaskOP repack_task = core::pack::task::TaskFactory::create_packer_task( *mypose );
+        repack_task->restrict_to_repacking();
+        core::pack::pack_rotamers( *mypose, *sfxn, repack_task );
+
+
+        core::Real newScore = sfxn->score( *mypose );
+        TR << "new score: " << newScore << std::endl;
+        monteCarlo->boltzmann(*mypose);
+        core::Real currScore = sfxn->score( *mypose );
+        TR << "current score: " << currScore << std::endl;
+        //core::Real score = sfxn->score( *mypose );
+        //TR << score << std::endl;
+
+    }
 	return 0;
 } 
