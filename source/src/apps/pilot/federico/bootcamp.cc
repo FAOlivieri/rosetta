@@ -15,7 +15,16 @@
 #include <core/import_pose/import_pose.hh>
 #include <utility/pointer/owning_ptr.hh>
 
+#include <core/scoring/ScoreFunction.hh>
+#include <core/scoring/ScoreFunctionFactory.hh>
+#include <basic/Tracer.hh>
+
+static basic::Tracer TR( "apps.pilot.federico.bootcamp" );
+
+
 int main(int argc, char ** argv ) {
+    
+
 	std::cout << "Hello World!" << std::endl;
     devel::init( argc, argv );
     utility::vector1< std::string > filenames = basic::options::option[ basic::options::OptionKeys::in::file::s ].value();
@@ -28,6 +37,9 @@ int main(int argc, char ** argv ) {
 
     core::pose::PoseOP mypose = core::import_pose::pose_from_file( filenames[1] );
 
+    core::scoring::ScoreFunctionOP sfxn = core::scoring::get_score_function();
+    core::Real score = sfxn->score( *mypose );
+    TR << score << std::endl;
 
 	return 0;
 } 
