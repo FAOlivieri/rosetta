@@ -57,7 +57,7 @@ public:
 		core::Size initial_size = queue_.size();
 		queue_.enqueue("test");
 		core::Size final_size = queue_.size();
-		TS_ASSERT( final_size == initial_size+1);
+		TS_ASSERT_EQUALS( final_size , initial_size+1);
 	}
 	
 	void test_dequeue(){
@@ -66,11 +66,11 @@ public:
 		queue_.enqueue("test2");
 		core::Size initial_size=queue_.size();
 		std::string output_string = queue_.dequeue();
-		TS_ASSERT(output_string=="test1");
-		TS_ASSERT(queue_.size()==initial_size-1);
+		TS_ASSERT_EQUALS(output_string,"test1");
+		TS_ASSERT_EQUALS(queue_.size(),initial_size-1);
 		output_string = queue_.dequeue();
-		TS_ASSERT(output_string=="test2");
-		TS_ASSERT(queue_.size()==initial_size-2);
+		TS_ASSERT_EQUALS(output_string,"test2");
+		TS_ASSERT_EQUALS(queue_.size(),initial_size-2);
 	}
 	void test_is_empty(){
 		TS_ASSERT(queue_.is_empty());
@@ -78,9 +78,12 @@ public:
 		TS_ASSERT(!queue_.is_empty());
 	}
 	void test_size(){
-		TS_ASSERT(queue_.size()==0);
-		queue_.enqueue("test");
-		TS_ASSERT(queue_.size()==1);
+		TS_ASSERT_EQUALS(queue_.size(),0);
+		for (int i=1; i<=5;i++){
+			queue_.enqueue("test");
+			TS_ASSERT_EQUALS(queue_.size(),i);
+		}
+		
 	}
 
 };
