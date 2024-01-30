@@ -25,6 +25,10 @@
 #include <core/pack/task/PackerTask.hh>
 #include <core/pack/pack_rotamers.hh>
 #include <core/pack/task/TaskFactory.hh>
+#include <core/kinematics/MoveMap.hh>
+#include <core/optimization/MinimizerOptions.hh>
+#include <core/optimization/AtomTreeMinimizer.hh>
+
 static basic::Tracer TR( "apps.pilot.federico.bootcamp" );
 
 
@@ -61,8 +65,11 @@ int main(int argc, char ** argv ) {
 
 
         core::Size randres = uniform_random_number * poseSize + 1 ;
-        core::Real pert1 = numeric::random::gaussian() ;
-        core::Real pert2 = numeric::random::gaussian() ;
+
+        core::Real temp = 0.3;
+
+        core::Real pert1 = numeric::random::gaussian() * temp ;
+        core::Real pert2 = numeric::random::gaussian() * temp ;
         core::Real orig_phi = mypose->phi( randres );
         core::Real orig_psi = mypose->psi( randres );
         mypose->set_phi( randres, orig_phi + pert1 );
@@ -72,16 +79,13 @@ int main(int argc, char ** argv ) {
         repack_task->restrict_to_repacking();
         core::pack::pack_rotamers( *mypose, *sfxn, repack_task );
 
-        atm.run( *copy_pose, mm, *sfxn, min_opts );
-        *mypose = copy_pose;
+        //atm.run( copy_pose, mm, *sfxn, min_opts );
+        //*mypose = copy_pose;
 
         core::Real newScore = sfxn->score( *mypose );
-        TR << "new score: " << newScore << std::endl;
         monteCarlo->boltzmann(*mypose);
         core::Real currScore = sfxn->score( *mypose );
-        TR << "current score: " << currScore << std::endl;
-        core::Real score = sfxn->score( *mypose );
-        TR << score << std::endl;
+        TR << "new pose score: " << newScore << ". current score: " << currScore << std::endl;
 
     }
 	return 0;
