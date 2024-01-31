@@ -31,7 +31,7 @@ namespace protocols {
             }
             utility::vector1< std::pair< core::Size, core::Size > > gap_boundaries = identify_gaps_spans(ss_boundaries,dssp_string.size());
             for ( core::Size ii = 1; ii <= gap_boundaries.size(); ++ii ) {
-                std::cout << "SS Element " << ii << " from residue "
+                std::cout << "GAP Element " << ii << " from residue "
                 << gap_boundaries[ ii ].first << " to "
                 << gap_boundaries[ ii ].second << std::endl;
             }
@@ -52,6 +52,7 @@ namespace protocols {
             }
 
             for ( core::Size ii = 1; ii <= ss_boundaries.size(); ++ii ) {  //For each secondary structure element add peptide edges
+
                 core::Size middle_of_current_ss_boundary_position=ss_boundaries[ii].first+((ss_boundaries[ii].second-ss_boundaries[ii].first)/2);
 
                 if (ii==1){
@@ -82,6 +83,7 @@ namespace protocols {
             }
 
             for ( core::Size ii = 2; ii <= gap_boundaries.size()-1; ++ii ) {  //For each gap element add peptide edges except first and last
+
                 core::Size middle_of_current_gap_boundary_position=gap_boundaries[ii].first+((gap_boundaries[ii].second-gap_boundaries[ii].first)/2);
                 if (middle_of_current_gap_boundary_position!=gap_boundaries[ii].first){ //only do this if they are different
                     foldTree.add_edge(middle_of_current_gap_boundary_position, gap_boundaries[ii].first, -1);
@@ -90,7 +92,7 @@ namespace protocols {
                     foldTree.add_edge(middle_of_current_gap_boundary_position, gap_boundaries[ii].second, -1);
                 }
             }
-
+            TR << foldTree << std::endl;
             //TR << dssp_string;
 
             return foldTree;
@@ -112,11 +114,14 @@ namespace protocols {
 
             core::Size start_position=1;
             for (core::Size ii = 1; ii <= ss_spans.size(); ++ii ){
-                gap_boundaries.push_back( std::make_pair( start_position, ss_spans[ii].first-1 ));
+                if (start_position<=ss_spans[ii].first-1){
+                    gap_boundaries.push_back( std::make_pair( start_position, ss_spans[ii].first-1 ));
+                }
                 start_position=ss_spans[ii].second+1;
             }
-            gap_boundaries.push_back( std::make_pair( ss_spans[ss_spans.size()].second+1, last_residue ));
-
+            if (ss_spans[ss_spans.size()].second<=last_residue){
+                gap_boundaries.push_back( std::make_pair( ss_spans[ss_spans.size()].second+1, last_residue ));
+            }
             return gap_boundaries;
         }
 

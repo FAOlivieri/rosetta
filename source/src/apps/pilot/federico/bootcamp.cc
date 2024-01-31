@@ -28,6 +28,9 @@
 #include <core/kinematics/MoveMap.hh>
 #include <core/optimization/MinimizerOptions.hh>
 #include <core/optimization/AtomTreeMinimizer.hh>
+#include <protocols/bootcamp/fold_tree_from_ss.hh> 
+#include <core/scoring/ScoreType.hh>
+#include <core/pose/variant_util.hh>
 
 static basic::Tracer TR( "apps.pilot.federico.bootcamp" );
 
@@ -47,6 +50,13 @@ int main(int argc, char ** argv ) {
 
     core::pose::PoseOP mypose = core::import_pose::pose_from_file( filenames[1] );
     core::scoring::ScoreFunctionOP sfxn = core::scoring::get_score_function();
+    
+    sfxn->set_weight(core::scoring::linear_chainbreak, 1);  //foldtree
+    core::pose::correctly_add_cutpoint_variants(*mypose);
+    core::kinematics::FoldTree fold_tree = protocols::bootcamp::fold_tree_from_ss(*mypose);
+    TR << "check_fold_tree: "<<fold_tree.check_fold_tree()<<std::endl;
+    mypose->fold_tree(fold_tree);
+
     protocols::moves::MonteCarloOP monteCarlo(new protocols::moves::MonteCarlo(*mypose, *sfxn, 0.8));
     protocols::moves::PyMOLObserverOP the_observer = protocols::moves::AddPyMOLObserver( *mypose, true, 0 );    
     the_observer->pymol().apply( *mypose);
@@ -58,9 +68,11 @@ int main(int argc, char ** argv ) {
     core::optimization::AtomTreeMinimizer atm;
     core::pose::Pose copy_pose = *mypose;
 
+
+
     core::Size number_of_iterations = 100;
     core::Size number_of_accepted_changes = 0;
-    core::Real temp = 1;
+    core::Real temp = 0.5;
     core::Real acum_score = 0;
 
     for (core::Size i = 0; i <= number_of_iterations; i++) {
@@ -98,7 +110,7 @@ int main(int argc, char ** argv ) {
         if (i % 100 == 0 ){
             float success_rate = float(number_of_accepted_changes)/float(number_of_iterations) ;
             float avg_score=acum_score/float(number_of_accepted_changes);
-            TR << "Proportion of accepted changes: " << success_rate << std::endl;  //0.29 before kinematics changes
+            TR << "Proportion of accepted changes: " << success_rate << std::endl;  //temp=0.5  0.43 w/o foldtree ||||  0.68 with foldtree
             TR << "Average score of accepted poses: " << avg_score << std::endl;
 
         }
