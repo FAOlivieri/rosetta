@@ -80,7 +80,7 @@ public:
 		std::string test_string="   EEEEEEE    EEEEEEE         EEEEEEEEE    EEEEEEEEEE   HHHHHH         EEEEEEEEE         EEEEE     ";
 		core::kinematics::FoldTree result_tree=fold_tree_from_dssp_string(test_string);
 		std::cout << result_tree << std::endl;
-		TS_ASSERT(true);
+		TS_ASSERT(result_tree.check_fold_tree());
 	}
 
 	core::kinematics::FoldTree fold_tree_from_dssp_string(std::string dssp_string){
@@ -100,6 +100,8 @@ public:
 		}
 		core::Size middle_of_first_ss_boundary_position = ss_boundaries[1].first+((ss_boundaries[1].second-ss_boundaries[1].first)/2);
 		core::Size jump_number=0;
+		
+		//The following is a truly horrifying piece of code. My crimes against good practices are beyond forgiveness. May god have mercy on my soul.
 
 		for ( core::Size ii = 2; ii <= ss_boundaries.size(); ++ii ) {  //For each secondary structure element other than the first add jump
 			jump_number++;
@@ -114,15 +116,35 @@ public:
 
 		for ( core::Size ii = 1; ii <= ss_boundaries.size(); ++ii ) {  //For each secondary structure element add peptide edges
 			core::Size middle_of_current_ss_boundary_position=ss_boundaries[ii].first+((ss_boundaries[ii].second-ss_boundaries[ii].first)/2);
-			if (middle_of_current_ss_boundary_position!=ss_boundaries[ii].first){ //only do this if they are different
-				foldTree.add_edge(middle_of_current_ss_boundary_position, ss_boundaries[ii].first, -1);
+
+			if (ii==1){
+				if (middle_of_current_ss_boundary_position!=ss_boundaries[ii].first){ //only do this if they are different
+					foldTree.add_edge(middle_of_current_ss_boundary_position, 1, -1);
+				}
+				if (middle_of_current_ss_boundary_position!=ss_boundaries[ii].second){ //only do this if they are different
+					foldTree.add_edge(middle_of_current_ss_boundary_position, ss_boundaries[ii].second, -1);
+				}
+			}else{
+				if (ii==ss_boundaries.size()){
+					if (middle_of_current_ss_boundary_position!=ss_boundaries[ii].first){ //only do this if they are different
+						foldTree.add_edge(middle_of_current_ss_boundary_position, ss_boundaries[ii].first, -1);
+					}
+					if (middle_of_current_ss_boundary_position!=dssp_string.size()){ //only do this if they are different
+						foldTree.add_edge(middle_of_current_ss_boundary_position, dssp_string.size(), -1);
+					}
+				}else{
+					if (middle_of_current_ss_boundary_position!=ss_boundaries[ii].first){ //only do this if they are different
+						foldTree.add_edge(middle_of_current_ss_boundary_position, ss_boundaries[ii].first, -1);
+					}
+					if (middle_of_current_ss_boundary_position!=ss_boundaries[ii].second){ //only do this if they are different
+						foldTree.add_edge(middle_of_current_ss_boundary_position, ss_boundaries[ii].second, -1);
+					}
+				}
 			}
-			if (middle_of_current_ss_boundary_position!=ss_boundaries[ii].second){ //only do this if they are different
-				foldTree.add_edge(middle_of_current_ss_boundary_position, ss_boundaries[ii].second, -1);
-			}
+			
 		}
 
-		for ( core::Size ii = 1; ii <= gap_boundaries.size(); ++ii ) {  //For each gap element add peptide edges
+		for ( core::Size ii = 2; ii <= gap_boundaries.size()-1; ++ii ) {  //For each gap element add peptide edges except first and last
 			core::Size middle_of_current_gap_boundary_position=gap_boundaries[ii].first+((gap_boundaries[ii].second-gap_boundaries[ii].first)/2);
 			if (middle_of_current_gap_boundary_position!=gap_boundaries[ii].first){ //only do this if they are different
 				foldTree.add_edge(middle_of_current_gap_boundary_position, gap_boundaries[ii].first, -1);
