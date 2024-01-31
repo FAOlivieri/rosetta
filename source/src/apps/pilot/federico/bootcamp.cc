@@ -58,15 +58,17 @@ int main(int argc, char ** argv ) {
     core::optimization::AtomTreeMinimizer atm;
     core::pose::Pose copy_pose = *mypose;
 
+    core::Size number_of_iterations = 100;
+    core::Size number_of_accepted_changes = 0;
+    core::Real temp = 1;
+    core::Real acum_score = 0;
 
-    for (int i = 0; i < 25; i++) {
+    for (core::Size i = 0; i <= number_of_iterations; i++) {
         double uniform_random_number= numeric::random::uniform();
         core::Size poseSize =  mypose->size();
 
 
         core::Size randres = uniform_random_number * poseSize + 1 ;
-
-        core::Real temp = 0.3;
 
         core::Real pert1 = numeric::random::gaussian() * temp ;
         core::Real pert2 = numeric::random::gaussian() * temp ;
@@ -83,10 +85,27 @@ int main(int argc, char ** argv ) {
         //*mypose = copy_pose;
 
         core::Real newScore = sfxn->score( *mypose );
-        monteCarlo->boltzmann(*mypose);
+        bool accepted = monteCarlo->boltzmann(*mypose);
+
         core::Real currScore = sfxn->score( *mypose );
-        TR << "new pose score: " << newScore << ". current score: " << currScore << std::endl;
+        TR << "Iteration number "<<i<<". new pose score: " << newScore << ". current score: " << currScore << std::endl;
+
+        if (accepted){
+            number_of_accepted_changes++;
+            acum_score+=currScore;
+        }
+
+        if (i % 100 == 0 ){
+            float success_rate = float(number_of_accepted_changes)/float(number_of_iterations) ;
+            float avg_score=acum_score/float(number_of_accepted_changes);
+            TR << "Proportion of accepted changes: " << success_rate << std::endl;  //0.29 before kinematics changes
+            TR << "Average score of accepted poses: " << avg_score << std::endl;
+
+        }
+
+
 
     }
+
 	return 0;
 } 
