@@ -10,17 +10,13 @@
 /// @file   test/protocols/match/FoldTreeFromSS.cxxtest.hh
 /// @brief
 /// @author Andrew Leaver-Fay (aleaverfay@gmail.com)
-// Test headers
-#include <cxxtest/TestSuite.h>
 
-#include <test/util/pose_funcs.hh>
-#include <test/core/init_util.hh>
 
 // Utility headers
 
 /// Project headers
 #include <core/types.hh>
-
+#include <iostream>
 // C++ headers
 
 //Auto Headers

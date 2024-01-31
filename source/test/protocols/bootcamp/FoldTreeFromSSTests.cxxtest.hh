@@ -35,7 +35,7 @@
 #include <core/kinematics/FoldTree.hh>
 #include <core/pose/Pose.hh>
 #include <core/scoring/dssp/Dssp.hh>
-#include to <protocols/bootcamp/fold_tree_from_ss.hh> 
+#include <protocols/bootcamp/fold_tree_from_ss.hh> 
 
 static basic::Tracer TR( "test.protocols.bootcamp" );
 
@@ -67,25 +67,25 @@ public:
 
 
 		utility::vector1< std::pair< core::Size, core::Size > > results;
-		results=identify_secondary_structure_spans("   EEEEE   HHHHHHHH  EEEEE   IGNOR EEEEEE   HHHHHHHHHHH  EEEEE  HHHH   ");
+		results=protocols::bootcamp::identify_secondary_structure_spans("   EEEEE   HHHHHHHH  EEEEE   IGNOR EEEEEE   HHHHHHHHHHH  EEEEE  HHHH   ");
 		TS_ASSERT_EQUALS(results,expected_result_test_1);
 
-		results=identify_secondary_structure_spans("HHHHHHH   HHHHHHHHHHHH      HHHHHHHHHHHHEEEEEEEEEEHHHHHHH EEEEHHH ");
+		results=protocols::bootcamp::identify_secondary_structure_spans("HHHHHHH   HHHHHHHHHHHH      HHHHHHHHHHHHEEEEEEEEEEHHHHHHH EEEEHHH ");
 		TS_ASSERT_EQUALS(results,expected_result_test_2);
 
-		results=identify_secondary_structure_spans("EEEEEEEEE EEEEEEEE EEEEEEEEE H EEEEE H H H EEEEEEEE");
+		results=protocols::bootcamp::identify_secondary_structure_spans("EEEEEEEEE EEEEEEEE EEEEEEEEE H EEEEE H H H EEEEEEEE");
 		TS_ASSERT_EQUALS(results,expected_result_test_3);
 	}
 
 	void test_fold_tree_from_dssp_string(){
 		std::string test_string="   EEEEEEE    EEEEEEE         EEEEEEEEE    EEEEEEEEEE   HHHHHH         EEEEEEEEE         EEEEE     ";
-		core::kinematics::FoldTree result_tree=fold_tree_from_dssp_string(test_string);
+		core::kinematics::FoldTree result_tree=protocols::bootcamp::fold_tree_from_dssp_string(test_string);
 		std::cout << result_tree << std::endl;
 		TS_ASSERT(result_tree.check_fold_tree());
 
 		core::pose::Pose test_pose = create_test_in_pdb_pose();
 		core::scoring::dssp::Dssp testIn_dssp = core::scoring::dssp::Dssp(test_pose, true);
-		result_tree=fold_tree_from_dssp_string(testIn_dssp.get_dssp_secstruct());
+		result_tree=protocols::bootcamp::fold_tree_from_dssp_string(testIn_dssp.get_dssp_secstruct());
 		TS_ASSERT(result_tree.check_fold_tree());
 
 	}

@@ -13,7 +13,7 @@
 
 
 // Test headers
-#include <fold_tree_from_ss.hh>
+#include <protocols/bootcamp/fold_tree_from_ss.hh>
 
 static basic::Tracer TR( "test.protocols.bootcamp" );
 
