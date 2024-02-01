@@ -1,0 +1,24 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS>
+        <ScoreFunction name="r15_cart" weights="ref2015" >
+        </ScoreFunction>
+    </SCOREFXNS>
+    <RESIDUE_SELECTORS>
+    
+
+    </RESIDUE_SELECTORS>
+
+	<TASKOPERATIONS>
+
+	</TASKOPERATIONS>
+	<FILTERS>
+
+	</FILTERS>
+	<MOVERS>
+        <BootcampMover name="bootcamp_mover" nloop="100" variance="0.5" scorefxn="r15_cart" />
+	</MOVERS>
+	<PROTOCOLS>
+        <Add mover_name="bootcamp_mover"/>
+
+	</PROTOCOLS>
+</ROSETTASCRIPTS>

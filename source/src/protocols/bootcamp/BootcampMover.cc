@@ -19,6 +19,7 @@
 #include <protocols/moves/PyMOLMover.hh>
 #include <protocols/bootcamp/fold_tree_from_ss.hh> 
 #include <protocols/jd2/JobDistributor.hh>
+#include <protocols/rosetta_scripts/util.hh>
 
 // Core headers
 #include <core/pose/Pose.hh>
@@ -84,17 +85,19 @@ BootcampMover::apply( core::pose::Pose& mypose){
 	//leftover from before. leaving it here just in case
 	//std::cout << "You entered: " << filenames[ 1 ] << " as the PDB file to be read" << std::endl;		
 	//core::pose::PoseOP mypose = core::import_pose::pose_from_file( filenames[1] ); 
-	core::scoring::ScoreFunctionOP sfxn = core::scoring::get_score_function();
-	
+	//core::scoring::ScoreFunctionOP sfxn = core::scoring::get_score_function();
+	core::scoring::ScoreFunctionOP sfxn = get_sfxn();
 	sfxn->set_weight(core::scoring::linear_chainbreak, 1);  //foldtree
-	core::pose::correctly_add_cutpoint_variants(mypose);
 	core::kinematics::FoldTree fold_tree = protocols::bootcamp::fold_tree_from_ss(mypose);
 	TR << "check_fold_tree: "<<fold_tree.check_fold_tree()<<std::endl;
 	mypose.fold_tree(fold_tree);
+	core::pose::correctly_add_cutpoint_variants(mypose);
 
 	protocols::moves::MonteCarloOP monteCarlo(new protocols::moves::MonteCarlo(mypose, *sfxn, 0.8));
-	//protocols::moves::PyMOLObserverOP the_observer = protocols::moves::AddPyMOLObserver( mypose, true, 0 );    
-	//the_observer->pymol().apply( mypose);
+
+	// protocols::moves::PyMOLObserverOP the_observer = protocols::moves::AddPyMOLObserver( mypose, true, 0 );    
+	// the_observer->pymol().apply( mypose);
+
 	core::kinematics::MoveMap mm;
 	mm.set_bb( true );
 	mm.set_chi( true );
@@ -103,9 +106,9 @@ BootcampMover::apply( core::pose::Pose& mypose){
 	core::optimization::AtomTreeMinimizer atm;
 	core::pose::Pose copy_pose = mypose;
 
-	core::Size number_of_iterations = 100;
+	core::Size number_of_iterations = nloop_;
 	core::Size number_of_accepted_changes = 0;
-	core::Real temp = 0.5;
+	core::Real temp = variance_;
 	core::Real acum_score = 0;
 
 	for (core::Size i = 0; i <= number_of_iterations; i++) {
@@ -169,21 +172,63 @@ BootcampMover::show(std::ostream & output) const
 /// @brief parse XML tag (to use this Mover in Rosetta Scripts)
 void
 BootcampMover::parse_my_tag(
-	utility::tag::TagCOP ,
-	basic::datacache::DataMap&
-) {
-
+	utility::tag::TagCOP const tag,
+	basic::datacache::DataMap & datamap
+)
+{
+	if ( tag->hasOption("nloop") ) {
+		nloop_ = tag->getOption<core::Size>("nloop",1);
+		runtime_assert( nloop_ > 0 );
+	}
+	if ( tag->hasOption("variance") ) {
+		variance_ = tag->getOption<core::Real>("variance");
+		runtime_assert( nloop_ > 0 );
+	}
+	core::scoring::ScoreFunctionOP new_score_function( protocols::rosetta_scripts::parse_score_function( tag, datamap ) );
+	//parse_task_operations( tag, datamap );
+	set_sfxn(new_score_function);
 }
+
 void BootcampMover::provide_xml_schema( utility::tag::XMLSchemaDefinition & xsd )
 {
 
 	using namespace utility::tag;
 	AttributeList attlist;
+	attlist	
+		+ XMLSchemaAttribute::attribute_w_default( "nloop" , xsct_positive_integer, "Number of iterations.", "100" )
+		+ XMLSchemaAttribute::attribute_w_default( "variance" , xsct_real, "perturbation size variance.", "1" );
+	core::scoring::attributes_for_parse_score_function(attlist);
 
 	//here you should write code to describe the XML Schema for the class.  If it has only attributes, simply fill the probided AttributeList.
 
 	protocols::moves::xsd_type_definition_w_attributes( xsd, mover_name(), "Bootcamp mover", attlist );
 }
+
+core::Size BootcampMover::get_nloop(){
+	return nloop_;
+}
+
+void BootcampMover::set_nloop(core::Size nloop){
+	nloop_=nloop;
+}
+
+core::Real BootcampMover::get_variance(){
+	return variance_;
+}
+
+void BootcampMover::set_variance(core::Real variance){
+	variance_=variance;
+}
+
+
+core::scoring::ScoreFunctionOP BootcampMover::get_sfxn(){
+	return sfxn_;
+}
+
+void BootcampMover::set_sfxn(core::scoring::ScoreFunctionOP sfxn){
+	sfxn_=sfxn;
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -208,6 +253,7 @@ std::string BootcampMover::get_name() const {
 std::string BootcampMover::mover_name() {
 	return "BootcampMover";
 }
+
 
 
 
@@ -248,6 +294,7 @@ BootcampMover::provide_citation_info(basic::citation_manager::CitationCollection
 ////////////////////////////////////////////////////////////////////////////////
 	/// private methods ///
 	///////////////////////
+
 
 
 std::ostream &

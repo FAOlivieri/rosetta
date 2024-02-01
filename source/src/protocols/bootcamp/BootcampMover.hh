@@ -30,6 +30,10 @@
 
 #include <basic/citation_manager/UnpublishedModuleInfo.fwd.hh>
 
+//My includes
+#include <core/scoring/ScoreFunction.hh>
+
+
 namespace protocols {
 namespace bootcamp {
 
@@ -96,6 +100,14 @@ public:
 	static
 	void
 	provide_xml_schema( utility::tag::XMLSchemaDefinition & xsd );
+	
+	core::Size get_nloop();
+	void set_nloop(core::Size);
+	core::Real get_variance();
+	void set_variance(core::Real);
+	core::scoring::ScoreFunctionOP get_sfxn();
+	void set_sfxn(core::scoring::ScoreFunctionOP );
+
 
 public: //Function overrides needed for the citation manager:
 
@@ -105,6 +117,9 @@ public: //Function overrides needed for the citation manager:
 private: // methods
 
 private: // data
+	core::Size nloop_;
+	core::scoring::ScoreFunctionOP sfxn_;
+	core::Real variance_;
 
 };
 

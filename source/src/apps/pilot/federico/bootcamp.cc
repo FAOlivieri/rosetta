@@ -10,6 +10,10 @@
 #include <iostream>
 #include <basic/Tracer.hh>
 #include <devel/init.hh>
+#include <core/pack/task/operation/TaskOperations.hh>
+#include <core/pack/task/TaskFactory.hh>
+
+#include <protocols/jd2/JobDistributor.hh>
 
 #include <protocols/bootcamp/BootcampMover.hh>
 #include <protocols/bootcamp/BootcampMoverCreator.hh>
@@ -27,7 +31,7 @@ int main(int argc, char ** argv ) {
     main_task_factory->push_back( utility::pointer::make_shared< core::pack::task::operation::InitializeFromCommandline >() );
     main_task_factory->push_back( utility::pointer::make_shared< core::pack::task::operation::ReadResfile >() );
 
-    protocols::moves::BootcampMoverOP bc_mover( new protocols::moves::BootcampMover );
+    protocols::bootcamp::BootcampMoverOP bc_mover( new protocols::bootcamp::BootcampMover );
 
     protocols::jd2::JobDistributor::get_instance()->go(bc_mover);
 

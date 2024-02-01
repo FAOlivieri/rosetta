@@ -38,6 +38,8 @@
 #include <protocols/bootcamp/fold_tree_from_ss.hh> 
 #include <protocols/moves/MoverFactory.hh> 
 #include <protocols/bootcamp/BootcampMover.hh>
+#include <utility/tag/Tag.hh>
+#include <test/util/rosettascripts.hh>
 
 static basic::Tracer TR( "test.protocols.bootcamp" );
 
@@ -52,6 +54,7 @@ public:
 	// Shared initialization goes here.
 	void setUp() {
 		core_init();
+
 	}
 
 	// Shared finalization goes here.
@@ -61,7 +64,17 @@ public:
 	void test_mover_factory() {
 		protocols::moves::MoverOP base_mover_op = protocols::moves::MoverFactory::get_instance()->newMover("BootcampMover");
 		protocols::bootcamp::BootcampMoverOP bcm_op =  utility::pointer::dynamic_pointer_cast< protocols::bootcamp::BootcampMover > ( base_mover_op );
-		TS_ASSERT(bcm_op!=0);
+		//utility::tag::TagCOP tag = tagptr_from_string("<MyTest name=test nloop=4>\n" "</MyTest>");
+		utility::tag::TagCOP tag = tagptr_from_string("<BootCampMover name=test scorefxn=\"testing123\"/>");
+		core::scoring::ScoreFunctionOP sfxn = core::scoring::ScoreFunctionOP( new core::scoring::ScoreFunction );
+		sfxn->name("testName");
+		basic::datacache::DataMap data;
+		prime_Data( data );
+		data.add( "scorefxns" , "testing123", sfxn );
+		bcm_op->parse_my_tag(tag,data);
+		TR << sfxn->get_name()<<std::endl;
+		TS_ASSERT_EQUALS( sfxn->get_name(), bcm_op->get_sfxn()->get_name() );
+
 	}
 
 
