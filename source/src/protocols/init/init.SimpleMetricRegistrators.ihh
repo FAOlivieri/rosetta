@@ -149,4 +149,8 @@ static SimpleMetricRegistrator< protocols::pose_sewing::simple_metrics::Blockwis
 static SimpleMetricRegistrator< protocols::pose_sewing::simple_metrics::MinimumInterAlphaDistanceMetricCreator > reg_MinimumInterAlphaDistanceMetricCreator;
 static SimpleMetricRegistrator< protocols::pose_sewing::simple_metrics::WindowPoseCompMotifMetricCreator > reg_WindowPoseCompMotifMetricCreator;
 
+
+static SimpleMetricRegistrator< protocols::bootcamp::PerResidueBfactorMetricCreator > reg_PerResidueBfactorMetricCreator;
+
+
 } // namespace protocols

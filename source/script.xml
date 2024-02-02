@@ -1,0 +1,21 @@
+
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+	</SCOREFXNS>
+	<RESIDUE_SELECTORS>
+     	<Chain name="chA" chains="A"/>	
+	</RESIDUE_SELECTORS>
+	<MOVE_MAP_FACTORIES>
+
+	</MOVE_MAP_FACTORIES>
+	<SIMPLE_METRICS>
+		<PerResidueBfactorMetric name="pr_bfactor_metric" residue_selector="chA" atom_type="CAbb"/>
+	</SIMPLE_METRICS>
+	<MOVERS>
+		<RunSimpleMetrics name="run_metrics" metrics="pr_bfactor_metric" />
+	</MOVERS>
+	<PROTOCOLS>
+		<Add mover_name="run_metrics" />
+		Add metrics="timing,rmsd" labels="run_time,bb_rmsd_to_native"/>
+	</PROTOCOLS>
+</ROSETTASCRIPTS>
